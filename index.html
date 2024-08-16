@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <title>Encriptador Orland Gonzalez</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/assets/Logo@2x.png" alt="Logo Alura" >
+    </header>
+    <main> 
+        <section>
+            <textarea class="area-texto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <p class="nota">⚠️ Solo letras minúsculas y sin acentos</p>
+            <div class="grupo-botones">
+                <button class="boton-encriptar" onclick="botonEncriptar()">Encriptar</button>
+                <button class="boton-desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+            </div> 
+        </section>
+
+        <section class="contenedor-mensaje">
+            <textarea class="mensaje" cols="20" rows="10" ></textarea>
+            <div class="texto-sobre-imagen">
+                <p id="sinMensaje" class="sin-mensaje">Ningún mensaje <br> fue encontrado</p>
+                <p id="instruccion" class="instruccion">Ingresa el texto que deseas encriptar <br> o desencriptar.</p>
+            </div>
+            <div>
+                <button id="botonCopiar" class="copiar oculto" onclick="copiarTexto()">Copiar</button>
+            </div>
+            
+        </section>
+    </main>
+    <script src="/script.js"></script>
+    
+</body>
+</html>

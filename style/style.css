@@ -1,0 +1,249 @@
+* {
+    background-image: url("/assets/Fondo.jpg");
+    font-family: "Orbitron";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    box-sizing: border-box;
+}
+
+.logo {
+    padding-top: 20px;
+    margin-left: 10px;
+    width: 10%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */   
+}
+
+.area-texto {
+    border: none;
+    color: #00bfff;
+    margin-top: 90px;
+    text-transform: lowercase;
+    resize: none;
+}
+::placeholder { color: #ffffff; }
+    .area-texto:focus {
+        outline: none;
+    }
+
+.texto-sobre-imagen {
+    position: absolute;
+    top: 67%;  /* Centra el texto verticalmente */
+    left: 86.5%; /* Centra el texto horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrarlo completamente */
+    text-align: center; /* Centra el texto si hay varias líneas */
+    color: #ffffff; /* Color del texto */
+    font-size: 24px; /* Tamaño del texto, puedes ajustarlo según sea necesario */
+    font-weight: bold; /* Otras propiedades del texto */
+    background: none;
+}
+    
+.sin-mensaje {
+    font-size: 24px;
+    background: none;
+    font-weight: bold;
+    text-align: center;
+}
+    
+.instruccion {
+    font-size: 16px;
+    background: none;
+    text-align: center;
+}
+
+.mensaje {
+    background: #121212;
+    background-image: url("/assets/Candado\ 3.webp");
+    /*background-repeat: no-repeat;*/
+    border: #00bfff;
+    border-radius: 24px;
+    color: #00bfff;
+    margin-top: 40px;
+    padding-left: 20px;
+    width: 400px;
+    height: 660px;
+    resize: none;
+}
+.mensaje:focus {
+    outline: none;
+}
+
+.grupo-botones {
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+}
+
+.boton-encriptar, .boton-desencriptar, .copiar {
+    border-radius: 24px;
+    cursor: pointer;
+    height: 67px;
+}
+
+.boton-encriptar {
+    background-color: #0a3871;
+    border: 2px solid #00bfff;
+    color: white;
+    width: 100%;
+}
+
+.boton-desencriptar {
+    background: #D8DFE9;
+    border: 2px solid #00bfff;
+    color: #0a3871;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.copiar {
+    border: 2px solid #00bfff;
+    border-radius: 24px;
+    background-color: white;
+    color: #0a3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 35px;
+    margin-top: -90px;
+    position: absolute;
+    width: 336px;
+    display: none;
+}
+
+.nota {
+    color: #00bfff;
+    font-size: 12px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    /* Estilos para móviles */
+    .logo {
+        width: 30%;
+    }
+    main {
+        margin-left: 0;
+    }
+    .area-texto, .mensaje {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .grupo-botones {
+        flex-direction: column;
+    }
+    .boton-encriptar, .boton-desencriptar {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .contenedor-mensaje {
+        display: flex;
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .mensaje {
+        width: 100%;
+        max-width: 350px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        /*margin-bottom: 20%; /* Da espacio entre el "Muñeco" y el texto */
+        height: 1100px;
+    }
+    
+    .texto-sobre-imagen {
+            top: 280%;
+            left: 50%;
+            text-align: center;
+            width: 50%;
+            max-width: 150px;
+    }
+    
+    .sin-mensaje, .instruccion {
+            font-size: 0.5rem; /* Ajusta el tamaño de fuente según sea necesario */
+    }
+
+    
+    .copiar {
+        margin-left: -43%;
+        width: 90%;
+    }
+}
+
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos para tablets */
+    .logo {
+        width: 20%;
+    }
+    .area-texto, .mensaje {
+        width: 70%;
+    }
+    .boton-encriptar, .boton-desencriptar {
+        width: 80%;
+    }
+
+    .contenedor-mensaje {
+        display: flex;
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .mensaje {
+        width: 200%;
+        max-width: 500px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        /*margin-bottom: 20%; /* Da espacio entre el "Muñeco" y el texto */
+        height: 1100px;
+    }
+
+    .texto-sobre-imagen {
+        top: 135%;
+        left: 50%;
+        text-align: center;
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .sin-mensaje, .instruccion {
+        font-size: 1rem; /* Ajusta el tamaño de fuente según sea necesario */
+    }
+
+    .copiar {
+        width: 40%;
+        margin-left: -200px;
+    }
+}
+@media (min-width: 1025px) {
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+    .area-texto {
+        width: 45%;
+    }
+}
+
+
